@@ -9,7 +9,7 @@ int    intValue = 65;
 float  floatValue = 65.0;
 
 // 문자열 네가지를 설정한다.
-String stringValue[]={"Binary:", "Decimal:", "Hexadecimal:", "ASCII:"}; // array
+String stringValue[]={"Binary:", "Decimal:", "Hexadecimal:", "ASCII:","char(intValue):"}; // array
 
 void setup() {
   // 9600bps로 시리얼 통신 설정
@@ -33,22 +33,24 @@ void loop() {
   // 줄바꿈
   Serial.println();
 
-  // 'int Value'를 출력하고 문자열과 숫자를 변수 유형별로 출력한다.
-  Serial.println("*** int Value ***");
-  Serial.print("* int Value *");
-  Serial.println( intValue );
-  
-  // Add your code here!
-  
+ // 'int Value'를 출력하고 문자열과 숫자를 변수 유형별로 출력한다.
 
-  // 'float Value'를 출력하고 문자열과 숫자를 변수 유형별로 출력한다.  
-  Serial.println("*** float Value ***");
-  Serial.print("float Value:");
-  //  Serial.write(floatValue);
-  //Serial.write(floatValue);
+  Serial.println("*** int Value ***");
+  Serial.print("int Value:"); 
+  Serial.println(intValue);
+  Serial.print(stringValue[4]);
+  Serial.write(charValue); 
+
+  // Add your code here!
 
   Serial.println();
-    
+
+  // 'float Value'를 출력하고 문자열과 숫자를 변수 유형별로 출력한다.  
+
+  Serial.println("*** float Value ***");
+  Serial.print("float Value:");
+  Serial.println(floatValue);
+  //Serial.write(floatValue);
   charValue++;  // charValue 1 증가
   intValue++;   // intValue 1 증가
   floatValue +=0.1;  // floatValue 0.1 증가
