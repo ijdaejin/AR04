@@ -21,7 +21,12 @@ void loop() {
   Serial.println(sum);  
   
   if(number == 100) {
-
+    Serial.println();
+    Serial.print("ar05: 1+2+.....+100=");
+    Serial.println(sum);
+    delay(5000);
+    exit(0);
+   
 
 
     
